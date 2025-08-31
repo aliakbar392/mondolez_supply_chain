@@ -79,12 +79,10 @@
 
         <!-- Timeline Section for the Supply Chain -->
         <section>
-            <!-- Timeline content remains largely the same, but with added interactive buttons -->
             <h3 class="font-serif text-3xl text-center mb-8">A Transparent Supply Chain</h3>
             <div class="relative wrap overflow-hidden p-4">
                 <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
-
-                <!-- Timeline Item 1: Sourcing -->
+                <!-- Timeline items here, same as before -->
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-dark-chocolate shadow-xl w-10 h-10 rounded-full"><svg class="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.293 13.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L13 11.414V19a1 1 0 11-2 0v-7.586l-2.293 2.293a1 1 0 01-1.414 0z"></path></svg></div>
@@ -94,12 +92,41 @@
                         <button class="text-sm text-gold font-semibold mt-2" onclick="openModal()">Meet a Farmer</button>
                     </div>
                 </div>
-                
                 <!-- ... other timeline items ... -->
-
             </div>
         </section>
         
+        <!-- NEW: Traceability & Impact Section -->
+        <section class="mt-12">
+            <h3 class="font-serif text-3xl text-center mb-8">Our Traceability & Impact Commitment</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-white">
+                <div class="bg-purple-800 p-6 rounded-lg shadow-lg">
+                    <h4 class="font-bold text-lg mb-2">Farm-to-Point Traceability</h4>
+                    <p class="text-sm">We insist on documented traceability from the farm to the first purchase point, conducting regular spot audits to ensure accuracy.</p>
+                </div>
+                <div class="bg-green-700 p-6 rounded-lg shadow-lg">
+                    <h4 class="font-bold text-lg mb-2">Deforestation Monitoring</h4>
+                    <p class="text-sm">Every farm in our program is digitally mapped, allowing us to actively monitor and prevent any cases of deforestation.</p>
+                </div>
+                <div class="bg-yellow-900 p-6 rounded-lg shadow-lg">
+                    <h4 class="font-bold text-lg mb-2">Child Labor Monitoring (CLMRS)</h4>
+                    <p class="text-sm">We implement a robust Child Labor Monitoring and Remediation System (CLMRS) across all communities we partner with.</p>
+                </div>
+                <div class="bg-orange-500 p-6 rounded-lg shadow-lg">
+                    <h4 class="font-bold text-lg mb-2">Continuous Impact Assessment</h4>
+                    <p class="text-sm">We constantly measure our social and environmental impact, using the data to learn, adapt, and improve our programs.</p>
+                </div>
+            </div>
+            <div class="mt-6 bg-yellow-400 p-6 rounded-lg shadow-lg text-dark-chocolate">
+                 <h4 class="font-bold text-lg mb-2 text-center">Third-Party Verification</h4>
+                 <p class="text-sm text-center mb-4">To ensure complete impartiality, our process is verified by world-class independent auditors.</p>
+                 <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-center">
+                     <p><span class="font-bold">FLOCERT</span> verifies our transactions (volume and premiums).</p>
+                     <p><span class="font-bold">IPSOS</span> conducts our ongoing impact assessments.</p>
+                 </div>
+            </div>
+        </section>
+
         <!-- Sustainability Scorecard Section -->
         <section class="mt-12">
             <h3 class="font-serif text-3xl text-center mb-8">Sustainability Scorecard</h3>
@@ -138,7 +165,7 @@
     <!-- Farmer Modal -->
     <div id="farmerModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
         <div class="bg-white rounded-lg shadow-2xl max-w-sm w-full p-6 text-center relative">
-            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800">&times;</button>
+            <button onclick="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-3xl font-bold">&times;</button>
             <img src="https://placehold.co/100x100/A37C5B/FFFFFF?text=Priya" alt="Farmer Priya" class="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gold">
             <h3 class="font-serif text-2xl text-dark-chocolate">Priya from Idukki Hills</h3>
             <p class="text-gray-600 mt-2">"Partnering with MadForCad has transformed our community. The fair-trade premium helps us invest in our children's education and sustainable farming techniques for the future."</p>
@@ -151,20 +178,25 @@
         const trackingDetails = document.getElementById('trackingDetails');
         const batchInput = document.getElementById('batchInput');
         const trackingError = document.getElementById('trackingError');
+        const skuSpan = document.getElementById('sku');
+        const batchNoSpan = document.getElementById('batchNo');
+        const craftedOnSpan = document.getElementById('craftedOn');
 
         trackingForm.addEventListener('submit', function(e) {
             e.preventDefault();
             trackingError.textContent = ''; // Clear previous errors
+            
             if (batchInput.value.trim().toUpperCase() === 'BATCH-2408-MUM') {
+                skuSpan.textContent = 'MFC-72DARK-85G';
+                batchNoSpan.textContent = 'BATCH-2408-MUM';
+                craftedOnSpan.textContent = 'August 28, 2025';
                 trackingDetails.classList.remove('hidden');
             } else {
-                trackingDetails.classList.add('hidden');
+                skuSpan.textContent = 'N/A';
+                batchNoSpan.textContent = 'N/A';
+                craftedOnSpan.textContent = 'N/A';
                 trackingError.textContent = 'Invalid Batch No. Please try BATCH-2408-MUM.';
-                 // Show the error message inside the tracking details box for better placement
                 trackingDetails.classList.remove('hidden');
-                document.getElementById('sku').textContent = 'N/A';
-                document.getElementById('batchNo').textContent = 'N/A';
-                document.getElementById('craftedOn').textContent = 'N/A';
             }
         });
 
@@ -182,6 +214,13 @@
         // Close modal if user clicks outside of the content
         farmerModal.addEventListener('click', function(event) {
             if (event.target === farmerModal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
                 closeModal();
             }
         });
