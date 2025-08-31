@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Journey of Our Chocolate</title>
+    <title>The Journey of Your MadForCad Chocolate</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts for a clean, readable look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Heroicons for more icon choices -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
         /* Custom styles to extend Tailwind */
         body {
@@ -24,10 +27,6 @@
         .text-dark-chocolate { color: #3D2B1F; }
         .text-gold { color: #D4AF37; }
         .border-gold { border-color: #D4AF37; }
-        .timeline-dot {
-            min-width: 1.25rem;
-            min-height: 1.25rem;
-        }
     </style>
 </head>
 <body class="bg-cream text-dark-chocolate">
@@ -43,20 +42,33 @@
     <!-- Main Content -->
     <main class="container mx-auto p-4 md:p-8 max-w-3xl">
         
-        <!-- Introduction Section -->
+        <!-- Introduction & Tracking Section -->
         <section class="text-center mb-12">
-            <h2 class="font-serif text-4xl mb-4">From Bean to Bar</h2>
+            <h2 class="font-serif text-4xl mb-4">Your Chocolate's Journey</h2>
             <p class="text-lg leading-relaxed max-w-2xl mx-auto">
-                You're holding more than just a chocolate bar. You're holding a story of dedicated farmers, rich traditions, and a commitment to quality. Scan this code to follow the transparent journey of your chocolate, from its origin to your hands.
+                This bar is unique. Here is its story, from the farm to your hands. We believe in 100% transparency so you can enjoy our chocolate with complete peace of mind.
             </p>
-            <div class="mt-6">
-                <img src="https://placehold.co/600x400/3D2B1F/F5F0E6?text=Our+Signature+Chocolate+Bar" alt="MadForCad Bar" class="rounded-lg shadow-xl mx-auto">
+             <!-- Product Details -->
+            <div class="mt-8 bg-white p-4 rounded-lg shadow-md border border-gray-200 max-w-md mx-auto">
+                <h3 class="font-bold text-lg text-dark-chocolate mb-3">Tracking Details</h3>
+                <div class="flex justify-between text-sm text-gray-700">
+                    <span class="font-semibold">SKU:</span>
+                    <span>MFC-72DARK-85G</span>
+                </div>
+                <div class="flex justify-between text-sm text-gray-700 mt-2">
+                    <span class="font-semibold">Batch No:</span>
+                    <span>BATCH-2408-MUM</span>
+                </div>
+                 <div class="flex justify-between text-sm text-gray-700 mt-2">
+                    <span class="font-semibold">Crafted On:</span>
+                    <span>August 28, 2025</span>
+                </div>
             </div>
         </section>
 
         <!-- Timeline Section for the Supply Chain -->
         <section>
-            <h3 class="font-serif text-3xl text-center mb-8">A Transparent Journey</h3>
+            <h3 class="font-serif text-3xl text-center mb-8">A Transparent Supply Chain</h3>
             <div class="relative wrap overflow-hidden p-4">
                 <!-- The vertical timeline bar -->
                 <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%"></div>
@@ -65,12 +77,13 @@
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-dark-chocolate shadow-xl w-10 h-10 rounded-full">
-                         <svg class="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6H8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"></path></svg>
+                         <svg class="w-6 h-6 mx-auto text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                     </div>
                     <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                         <h4 class="font-bold text-lg mb-1">1. Ethical Sourcing</h4>
                         <p class="text-sm font-semibold text-gray-600">Idukki Hills, Kerala, India</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-700">Our journey begins with single-origin cacao beans, ethically harvested by the farming cooperatives in the lush, rain-fed hills of Idukki. We partner directly with farmers, ensuring fair wages and supporting sustainable agricultural practices.</p>
+                        <p class="text-xs text-green-700 font-semibold mb-2">Certified Fair Trade & Organic</p>
+                        <p class="text-sm leading-snug tracking-wide text-gray-700">Grown using agroforestry methods to promote biodiversity. We pay a 15% premium above market price directly to our farming partners.</p>
                     </div>
                 </div>
 
@@ -78,12 +91,13 @@
                 <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div class="order-1 w-5/12"></div>
                      <div class="z-20 flex items-center order-1 bg-dark-chocolate shadow-xl w-10 h-10 rounded-full">
-                        <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h4 class="font-bold text-lg mb-1">2. Fermentation & Drying</h4>
+                        <h4 class="font-bold text-lg mb-1">2. Natural Processing</h4>
                         <p class="text-sm font-semibold text-gray-600">At the Cooperative</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-700">The harvested beans are fermented for 5-7 days in wooden boxes to develop their rich, complex flavor profile. Afterwards, they are sun-dried on raised beds, a traditional method that preserves their quality and aroma.</p>
+                         <p class="text-xs text-green-700 font-semibold mb-2">Zero-Emission & Water-Wise</p>
+                        <p class="text-sm leading-snug tracking-wide text-gray-700">Beans are fermented to develop flavor, then sun-dried on raised beds—a zero-emission process powered by nature. Water used is recycled for local irrigation.</p>
                     </div>
                 </div>
                 
@@ -91,12 +105,13 @@
                 <div class="mb-8 flex justify-between items-center w-full right-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-dark-chocolate shadow-xl w-10 h-10 rounded-full">
-                       <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.657 7.343A8 8 0 0117.657 18.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1014.12 11.88l-4.242 4.242z"></path></svg>
+                       <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                     <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
-                        <h4 class="font-bold text-lg mb-1">3. Crafting the Chocolate</h4>
+                        <h4 class="font-bold text-lg mb-1">3. Green Crafting</h4>
                         <p class="text-sm font-semibold text-gray-600">Our Atelier in Mumbai</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-700">The dried beans arrive at our Mumbai atelier. Here, our chocolatiers expertly roast, winnow, conch, and temper the beans in small batches. This meticulous process transforms them into the smooth, decadent chocolate you love.</p>
+                         <p class="text-xs text-green-700 font-semibold mb-2">Zero-Waste & Ethical Labor</p>
+                        <p class="text-sm leading-snug tracking-wide text-gray-700">Our chocolatiers roast and conch beans in our green-certified atelier. We ensure fair wages for our team and 98% of production waste is recycled or composted.</p>
                     </div>
                 </div>
 
@@ -104,13 +119,41 @@
                 <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
                     <div class="order-1 w-5/12"></div>
                     <div class="z-20 flex items-center order-1 bg-dark-chocolate shadow-xl w-10 h-10 rounded-full">
-                        <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        <svg class="w-6 h-6 text-white mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18L6 12M18 6l-6 6"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4">
                         <h4 class="font-bold text-lg mb-1">4. Mindful Packaging</h4>
                         <p class="text-sm font-semibold text-gray-600">Ready for You</p>
-                        <p class="text-sm leading-snug tracking-wide text-gray-700">Each bar is hand-wrapped in eco-friendly packaging made from recycled materials. This QR code is our final touch—a gateway for you to connect with the product's story.</p>
+                        <p class="text-xs text-green-700 font-semibold mb-2">100% Recyclable & Compostable</p>
+                        <p class="text-sm leading-snug tracking-wide text-gray-700">Wrapped in FSC-certified paper and printed with vegetable-based inks. This QR code is our final touch—your link to our shared story of sustainability.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Scorecard Section -->
+        <section class="mt-12">
+            <h3 class="font-serif text-3xl text-center mb-8">Sustainability Scorecard</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <ion-icon name="leaf-outline" class="text-3xl text-green-600 mx-auto"></ion-icon>
+                    <h4 class="font-bold mt-2">Carbon Neutral</h4>
+                    <p class="text-xs text-gray-600">From farm to bar</p>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md">
+                    <ion-icon name="wallet-outline" class="text-3xl text-gold mx-auto"></ion-icon>
+                    <h4 class="font-bold mt-2">+15% Farmer Premium</h4>
+                    <p class="text-xs text-gray-600">Paid directly</p>
+                </div>
+                 <div class="bg-white p-4 rounded-lg shadow-md">
+                    <ion-icon name="water-outline" class="text-3xl text-blue-500 mx-auto"></ion-icon>
+                    <h4 class="font-bold mt-2">Water Conscious</h4>
+                    <p class="text-xs text-gray-600">-70% vs industry avg</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <ion-icon name="trash-bin-outline" class="text-3xl text-gray-500 mx-auto"></ion-icon>
+                    <h4 class="font-bold mt-2">Zero Waste</h4>
+                    <p class="text-xs text-gray-600">98% diverted from landfill</p>
                 </div>
             </div>
         </section>
